@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D893D1A-DE5D-46B8-948C-C4200013CC01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Media_Sorter</RootNamespace>
+    <AssemblyName>Media Sorter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Media_Sorter.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.7.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Video, Version=3.7.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Accord.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Video.DirectShow, Version=3.7.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Accord.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MetadataExtractor, Version=2.4.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MetadataExtractor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.WindowsAPICodePack">
+      <HintPath>.\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>.\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XmpCore, Version=6.1.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\XmpCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CDestination.cs" />
+    <Compile Include="CDestinationManager.cs" />
+    <Compile Include="CFile.cs" />
+    <Compile Include="CFileManager.cs" />
+    <Compile Include="CFolder.cs" />
+    <Compile Include="CFolderManager.cs" />
+    <Compile Include="CHelper.cs" />
+    <Compile Include="CImageBuffer.cs" />
+    <Compile Include="CListExtension.cs" />
+    <Compile Include="CMetadata.cs" />
+    <Compile Include="CPatternManager.cs" />
+    <Compile Include="CPattern.cs" />
+    <Compile Include="CSortedFolder.cs" />
+    <Compile Include="CSortedFolderManager.cs" />
+    <Compile Include="CThreadManager.cs" />
+    <Compile Include="CTreeNodeCollectionExtension.cs" />
+    <Compile Include="CTreeViewExtension.cs" />
+    <Compile Include="FAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAbout.Designer.cs">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDateTimePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDateTimePicker.Designer.cs">
+      <DependentUpon>FDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMetadata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMetadata.Designer.cs">
+      <DependentUpon>FMetadata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPatterns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPatterns.Designer.cs">
+      <DependentUpon>FPatterns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProcess.Designer.cs">
+      <DependentUpon>FProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRename.Designer.cs">
+      <DependentUpon>FRename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSettings.Designer.cs">
+      <DependentUpon>FSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSorting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSorting.Designer.cs">
+      <DependentUpon>FSorting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FAbout.resx">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDateTimePicker.resx">
+      <DependentUpon>FDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMetadata.resx">
+      <DependentUpon>FMetadata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPatterns.resx">
+      <DependentUpon>FPatterns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProcess.resx">
+      <DependentUpon>FProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRename.resx">
+      <DependentUpon>FRename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSettings.resx">
+      <DependentUpon>FSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSorting.resx">
+      <DependentUpon>FSorting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\source.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\folder_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <Content Include="MetadataExtractor.dll" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <None Include="Properties\plus.png" />
+    <None Include="Properties\cross.png" />
+    <None Include="Properties\long_image.png" />
+    <None Include="Properties\settings.png" />
+    <None Include="Properties\sort1.png" />
+    <None Include="Properties\about.png" />
+    <None Include="Properties\expand.png" />
+    <None Include="Properties\collapse.png" />
+    <None Include="Properties\check_all.png" />
+    <None Include="Properties\uncheck_all.png" />
+    <None Include="Properties\add_sorted_folder.png" />
+    <None Include="Properties\delete_sorted_folders.png" />
+    <None Include="Properties\delete_sorted_folder.png" />
+    <None Include="Properties\progressbar.png" />
+    <None Include="Properties\refresh.png" />
+    <None Include="Properties\logo.png" />
+    <None Include="Properties\select_all.png" />
+    <None Include="Properties\picture.png" />
+    <None Include="Properties\open_location.png" />
+    <None Include="Properties\metadata.png" />
+    <None Include="Properties\delete_files.png" />
+    <None Include="Properties\open_folder.png" />
+    <Content Include="XmpCore.dll" />
+    <None Include="Properties\sort.png" />
+    <None Include="Properties\exit.png" />
+    <None Include="Properties\bad_image.png" />
+    <None Include="Properties\l11.png" />
+    <None Include="Properties\l10.png" />
+    <None Include="Properties\l9.png" />
+    <None Include="Properties\l8.png" />
+    <None Include="Properties\l7.png" />
+    <None Include="Properties\l6.png" />
+    <None Include="Properties\l5.png" />
+    <None Include="Properties\l4.png" />
+    <None Include="Properties\l3.png" />
+    <None Include="Properties\l2.png" />
+    <None Include="Properties\l1.png" />
+    <None Include="Properties\l0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
